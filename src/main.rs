@@ -7,7 +7,7 @@ use rocket::response::status;
 
 #[get("/")]
 fn index() -> status::Accepted<content::RawJson<&'static str>> {
-    status::Accepted(content::RawJson({"{ 'health': 'ok' }"}))
+    status::Accepted(content::RawJson("{ 'ping': 'pong' }"))
 }
 
 #[launch]
